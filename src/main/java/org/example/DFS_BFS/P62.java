@@ -1,8 +1,7 @@
-package org.example.Recursive;
+package org.example.DFS_BFS;
 
 import org.example.stackqueue.Problem;
 
-import java.util.Scanner;
 //이진트리순회
 class Node{
     int data;

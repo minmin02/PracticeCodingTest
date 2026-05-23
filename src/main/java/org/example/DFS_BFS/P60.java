@@ -1,4 +1,4 @@
-package org.example.Recursive;
+package org.example.DFS_BFS;
 
 import org.example.stackqueue.Problem;
 
