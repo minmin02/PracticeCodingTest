@@ -16,16 +16,16 @@ public class P70 implements Problem {
         ch[v]=1;// 체크 배열
         dis[v]=0; // 시작점
         queue.offer(v);
+
         while(!queue.isEmpty()){
             int cv=queue.poll();
             for(int nv:graph.get(cv)){ //nv는 cv로 갈 수 있는 정점 graph(cv,[nv...])
                 if(ch[nv]==0){
-                    ch[nv]=1;
+                    ch[nv]=1; // nv 방문한 노드
                     queue.offer(nv);
                     dis[nv]=dis[cv]+1; //nv는 cv를 타고 들어감
                 }
             }
-
         }
 
 
@@ -52,7 +52,7 @@ public class P70 implements Problem {
         }
         BFS(1);
         for(int i=2; i<=n; i++){
-            System.out.println(i+" "+dis[i]);
+            System.out.println(i+" "+dis[i]); //1번부터 i번 노드까지 최단거리
         }
 
 
