@@ -9,7 +9,7 @@ public class P79 implements Problem {
 
     int[][]dy=new int[35][35];
     public int DFS(int n,int r){
-        if(dy[n][r]>0)return dy[n][r]; // 굳이 뻣지 않게끔
+        if(dy[n][r]>0)return dy[n][r]; // 굳이 뻣지 않게끔 이미 적재되어있는지 확인
         if(n==r || r==0)return 1;
         else return dy[n][r]=DFS(n-1,r-1)+DFS(n-1,r-2);
     }
