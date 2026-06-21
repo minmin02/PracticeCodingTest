@@ -7,10 +7,10 @@ import java.util.Queue;
 import java.util.Scanner;
 
 class Points{
-    public int x,y;
-    Points(int x,int y){
-        this.x=x;
-        this.y=y;
+    public int row,col;
+    Points(int row,int col){
+        this.row=row;
+        this.col=col;
     }
 }
 
@@ -28,12 +28,12 @@ public class P83 implements Problem {
         while(!q.isEmpty()){
             Points tmp=q.poll();
             for(int i=0; i<4; i++){
-                int nx=tmp.x+dx[i];// 현재 좌표에서 이동
-                int ny=tmp.y+dy[i];
+                int nx=tmp.row+dx[i];// 현재 좌표에서 이동
+                int ny=tmp.col+dy[i];
                 if(nx>=1&&nx<=7&&ny>=1&&ny<=7&&board[nx][ny]==0){
                     board[nx][ny]=1;
                     q.offer(new Points(nx,ny));
-                    dis[nx][ny]=dis[tmp.x][tmp.y]+1; // 최단거리 길이 구하기위함
+                    dis[nx][ny]=dis[tmp.row][tmp.col]+1; // 최단거리 길이 구하기위함
 
                 }
             }
