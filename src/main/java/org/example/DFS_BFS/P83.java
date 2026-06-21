@@ -14,7 +14,7 @@ class Points{
     }
 }
 
-//메모이제이션
+//메모이제이
 public class P83 implements Problem {
     static int[] dx={-1,0,1,0};
     static int[]dy={0,1,0,-1};
