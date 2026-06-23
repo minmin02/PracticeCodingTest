@@ -15,7 +15,7 @@ class Body implements Comparable<Body>{
 
     @Override
     public int compareTo(Body o)  {
-        return o.h-this.h; // sort 할 때 ㅗh가 큰 순서대로
+        return o.h-this.h; // sort 할 때 h가 큰 순서대로
     }
 }
 
